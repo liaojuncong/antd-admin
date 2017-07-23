@@ -5,6 +5,8 @@ import { Row, Col, Card } from 'antd'
 import styles from './index.less'
 import { color } from 'utils'
 
+import SalesChart from '../../components/Charts/salesChart'
+
 const bodyStyle = {
   bodyStyle: {
     height: 432,
@@ -12,10 +14,14 @@ const bodyStyle = {
   },
 }
 
-function Dashboard ({ dashboard }) {
+function Dashboard({ dashboard }) {
+  var data = [
+    { value: 1, name: "是" },
+    { value: 2, name: "否" }
+  ]
   return (
     <div>
-      Dashboard
+      <SalesChart />
     </div>
   )
 }

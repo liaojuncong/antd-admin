@@ -6,6 +6,8 @@
     "draftjs-to-markdown": "^0.4.0",
     "dva": "^1.2.0",
     "dva-loading": "^0.2.0",
+    "echarts": "^3.6.2",
+    "echarts-for-react": "^1.4.4",
     "lodash": "^4.17.4",
     "nprogress": "^0.2.0",
     "qs": "^6.5.0",
