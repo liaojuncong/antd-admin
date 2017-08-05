@@ -1,16 +1,3 @@
-# Antd Admin
-
-[![React](https://img.shields.io/badge/react-^15.6.1-brightgreen.svg?style=flat-square)](https://github.com/facebook/react)
-[![Ant Design](https://img.shields.io/badge/ant--design-^2.11.2-yellowgreen.svg?style=flat-square)](https://github.com/ant-design/ant-design)
-[![dva](https://img.shields.io/badge/dva-^1.2.0-orange.svg?style=flat-square)](https://github.com/dvajs/dva)
-
-[![GitHub issues](https://img.shields.io/github/issues/zuiidea/antd-admin.svg?style=flat-square)](https://github.com/zuiidea/antd-admin)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/zuiidea/antd-admin/pulls)
-[![MIT](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-
-演示地址 <http://zuiidea.github.io/antd-admin>  \| [备用地址](http://47.92.30.98:8000)
-
 ## 特性
 
 -   基于[react](https://github.com/facebook/react)，[ant-design](https://github.com/ant-design/ant-design)，[dva](https://github.com/dvajs/dva)，[Mock](https://github.com/nuysoft/Mock) 企业级后台管理系统最佳实践。
@@ -19,37 +6,6 @@
 -   使用[roadhog](https://github.com/sorrycc/roadhog)本地调试和构建，其中Mock功能实现脱离后端独立开发。
 -   浅度响应式设计。
 
-## 更新日志
-
-### 4.2.3
-
-`2017-07-07`
-
--     新增用户按权限访问。[#384](https://github.com/zuiidea/antd-admin/issues/384)
-
-### 4.2.2
-
-`2017-06-01`
-
--     新增用户管理批量删除。[#320](https://github.com/zuiidea/antd-admin/issues/320)
-
-### 4.2.1
-
-`2017-05-12`
-
--     新增IconFont扩展方案,本地使用方案。[#270](https://github.com/zuiidea/antd-admin/issues/270) [Live](http://47.92.30.98:666/UIElement/iconfont)
--     新增常见场景使用loading。 [dva-loading](https://github.com/dvajs/dva-loading)
-
-### 4.2
-
-`2017-04-28`
-
--     修改user相关API使用`Restful`风格。
--     增加user页面多条件查询。[#266](https://github.com/zuiidea/antd-admin/issues/226)
--     修复菜单默认高亮。[#201](https://github.com/zuiidea/antd-admin/issues/201)
-
-      [More Change Log](https://github.com/zuiidea/antd-admin/wiki/Change-Log)
-
 ## 开发构建
 
 ### 目录结构
@@ -57,6 +13,7 @@
 ```bash
 ├── /dist/           # 项目输出目录
 ├── /src/            # 项目源码目录
+│ ├── /public/       # 公共文件，编译时copy至dist目录
 │ ├── /components/   # UI组件及UI相关方法
 │ │ ├── skin.less    # 全局样式
 │ │ └── vars.less    # 全局样式变量
@@ -89,15 +46,21 @@
 
 克隆项目文件:
 
-    git clone https://github.com/zuiidea/antd-admin.git
+```bash
+git clone https://github.com/zuiidea/antd-admin.git
+```
 
 进入目录安装依赖:
 
-    npm i 或者 yarn install
+```bash
+#开始前请确保没有安装roadhog、webpack到NPM全局目录
+npm i 或者 yarn install
+```
 
 开发：
 
 ```bash
+npm run build:dll #第一次npm run dev时需运行此命令，使开发时编译更快
 npm run dev
 打开 http://localhost:8000
 ```
@@ -115,21 +78,3 @@ npm run build
 ```bash
 npm run lint
 ```
-
-项目部署 [#269](https://github.com/zuiidea/antd-admin/issues/269)
-
-## 参考
-
-用户列表：<https://github.com/dvajs/dva/tree/master/examples/user-dashboard>
-
-dashboard设计稿：<https://dribbble.com/shots/3108122-Dashboard-Admin> （已征得作者同意）
-
-## 截屏
-
-web
-
-![](assets/4.2.1-demo-1.gif)
-
-移动
-
-![](assets/4.2.1-demo-2.gif)
